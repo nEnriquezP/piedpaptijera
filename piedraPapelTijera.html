@@ -6,7 +6,9 @@
         <script>
             // 1 es Piedra, 2 es Papel y 3 es Tijera
             let jugador = 0
-            let pc = 2
+            let min = 1
+            let max = 3
+            let pc = Math.floor ( Math.random() * (max - min + 1) + min)
             let nombrejugador = prompt("Cual es tu nombre CHE? ")
             jugador = prompt(nombrejugador + " Elije: 1 para Piedra, 2 para Papel, 3 para tijera")
             //alert("Elegiste " + jugador)
@@ -57,7 +59,7 @@
                 alert("LA PC GANA")
             }
             else if(jugador==3 && pc==2) {
-                alert(nombrejugador + "GANASTE JATE JATE")
+                alert(nombrejugador + " GANASTE JATE JATE")
             }
 
         </script>
