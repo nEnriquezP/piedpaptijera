@@ -8,18 +8,20 @@
                 return Math.floor ( Math.random() * (max - min + 1) + min)
             }
             function eleccion (jugada) {
+                let resultado = ""
                 if (jugador==1) {
-                    alert(nombrejugador + " Elegiste 🪨")
+                    resultado = " Piedra 🪨"
                 }
                 else if(jugador==2) {
-                alert(nombrejugador + " Elegiste 📃")
+                    resultado = " Papel 📃"
             }
             else if  (jugador==3) {
-                alert(nombrejugador + " Elegiste ✂️")
+                    resultado =  " Tijera ✂️"
             }
             else {
-                alert(nombrejugador + " La CARLITOS mi Brodi")
+                resultado =  " La CARLITOS mi Brodi"
             }
+                return resultado
             }
             // 1 es Piedra, 2 es Papel y 3 es Tijera
             let jugador = 0
@@ -28,20 +30,8 @@
             jugador = prompt(nombrejugador + " Elije: 1 para Piedra, 2 para Papel, 3 para tijera")
             //alert("Elegiste " + jugador)
             
-            eleccion(jugador) //llamo a la funcion
-
-            if(pc==1) {
-                alert( " PC eligió 🪨")
-            }
-            else if(pc==2) {
-                alert("PC eligió 📃")
-            }
-            else if  (pc==3) {
-                alert("PC eligió ✂️")
-            }
-            else {
-                alert("La CARLITOS la PC")
-            }
+            alert(nombrejugador + " Elegiste: " + eleccion(jugador)) //llamo a la funcion
+            alert("La Pc eligió: " + eleccion(pc))
 
             //COMBATE ENTRE JUGADOR Y PC
 
