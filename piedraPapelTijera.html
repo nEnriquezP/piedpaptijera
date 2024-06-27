@@ -7,16 +7,11 @@
             function aleatorio (min, max) {
                 return Math.floor ( Math.random() * (max - min + 1) + min)
             }
-            // 1 es Piedra, 2 es Papel y 3 es Tijera
-            let jugador = 0
-            let pc = aleatorio(1,3)
-            let nombrejugador = prompt("Cual es tu nombre CHE? ")
-            jugador = prompt(nombrejugador + " Elije: 1 para Piedra, 2 para Papel, 3 para tijera")
-            //alert("Elegiste " + jugador)
-            if(jugador==1) {
-                alert(nombrejugador + " Elegiste 🪨")
-            }
-            else if(jugador==2) {
+            function eleccion (jugada) {
+                if (jugador==1) {
+                    alert(nombrejugador + " Elegiste 🪨")
+                }
+                else if(jugador==2) {
                 alert(nombrejugador + " Elegiste 📃")
             }
             else if  (jugador==3) {
@@ -25,6 +20,15 @@
             else {
                 alert(nombrejugador + " La CARLITOS mi Brodi")
             }
+            }
+            // 1 es Piedra, 2 es Papel y 3 es Tijera
+            let jugador = 0
+            let pc = aleatorio(1,3)
+            let nombrejugador = prompt("Cual es tu nombre CHE? ")
+            jugador = prompt(nombrejugador + " Elije: 1 para Piedra, 2 para Papel, 3 para tijera")
+            //alert("Elegiste " + jugador)
+            
+            eleccion(jugador) //llamo a la funcion
 
             if(pc==1) {
                 alert( " PC eligió 🪨")
