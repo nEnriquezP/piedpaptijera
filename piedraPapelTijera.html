@@ -3,61 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Piedra, Papel o Tijera </title>
-        <script>
-            function aleatorio (min, max) {
-                return Math.floor ( Math.random() * (max - min + 1) + min)
-            }
-            function eleccion (jugada) {
-                let resultado = ""
-                if (jugador==1) {
-                    resultado = " Piedra 🪨"
-                }
-                else if(jugador==2) {
-                    resultado = " Papel 📃"
-            }
-            else if  (jugador==3) {
-                    resultado =  " Tijera ✂️"
-            }
-            else {
-                resultado =  " La CARLITOS mi Brodi"
-            }
-                return resultado
-            }
-            // 1 es Piedra, 2 es Papel y 3 es Tijera
-            let jugador = 0
-            let pc = aleatorio(1,3)
-            let nombrejugador = prompt("Cual es tu nombre CHE? ")
-            jugador = prompt(nombrejugador + " Elije: 1 para Piedra, 2 para Papel, 3 para tijera")
-            //alert("Elegiste " + jugador)
-            
-            alert(nombrejugador + " Elegiste: " + eleccion(jugador)) //llamo a la funcion
-            alert("La Pc eligió: " + eleccion(pc))
-
-            //COMBATE ENTRE JUGADOR Y PC
-
-            if(pc==jugador){
-                alert("EMPATARON")
-            }
-            else if (jugador==1 && pc==2){
-                alert("La PC GANA")
-            }
-            else if (jugador==1 && pc==3){
-                alert(nombrejugador + " GANASTE")
-            }
-            else if(jugador==2 && pc==1) {
-                alert(nombrejugador + " GANASTE")
-            }
-            else if(jugador==2 && pc==3) {
-                alert("GANO LA PC")
-            }
-            else if(jugador==3 && pc==1){
-                alert("LA PC GANA")
-            }
-            else if(jugador==3 && pc==2) {
-                alert(nombrejugador + " GANASTE JATE JATE")
-            }
-
-        </script>
+        <script src="js/codigojavascript.js"> </script>
         <body>
             <h1>Pieddra, Papel o Tijera</h1>
         </body>
